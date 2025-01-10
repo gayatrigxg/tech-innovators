@@ -302,6 +302,105 @@ html {
 }
 
 
+/* For screens smaller than 768px (tablets and smaller devices) */
+@media (max-width: 768px) {
+    header {
+        padding: 15px 10px; /* Reduce padding */
+    }
+
+    header nav {
+        margin-left: 0; /* Remove margin for better navigation on small screens */
+        text-align: center; /* Center the links */
+    }
+
+    header a {
+        margin: 10px 20px; /* Adjust link spacing */
+    }
+
+    .hero {
+        padding: 60px 20px; /* Adjust padding */
+    }
+
+    .hero h2 {
+        font-size: 2.5rem; /* Reduce font size for smaller screens */
+    }
+
+    .who-are-we-container,
+    .vision-container {
+        flex-direction: column; /* Stack text and images vertically */
+        padding: 0 20px; /* Reduce padding */
+    }
+
+    .who-are-we-text,
+    .vision-text {
+        padding: 10px 0; /* Adjust text container padding */
+    }
+
+    .who-are-we-image img,
+    .vision-image img {
+        max-width: 90%; /* Adjust image size */
+        margin: 10px 0; /* Add margin for spacing */
+    }
+
+    .contact-container {
+        flex-direction: column; /* Stack contact info and map vertically */
+        align-items: center; /* Center the content */
+    }
+
+    iframe {
+        max-width: 100%; /* Make map responsive */
+        height: 200px; /* Reduce height */
+    }
+
+    .contact-form {
+        max-width: 100%; /* Full width for small screens */
+    }
+
+    .form-container {
+        flex-direction: column; /* Stack the form and info vertically */
+    }
+
+    .form-info {
+        margin-left: 0; /* Remove left margin */
+        text-align: center; /* Center the info text */
+    }
+
+    .contact-form {
+        margin-top: 20px; /* Add some space between form and "We don't bite!" section */
+    }
+}
+
+/* For screens smaller than 480px (mobile devices) */
+@media (max-width: 480px) {
+    .hero h2 {
+        font-size: 2rem; /* Further reduce the font size */
+    }
+
+    .hero p {
+        font-size: 1.5rem; /* Adjust paragraph font size */
+    }
+
+    .who-are-we-text,
+    .vision-text {
+        font-size: 1.2rem; /* Smaller font size for mobile */
+    }
+
+    .who-are-we-container,
+    .vision-container {
+        padding: 0 10px; /* Reduce padding further for mobile */
+    }
+
+    .contact-form {
+        width: 100%; /* Ensure form takes full width */
+    }
+
+    iframe {
+        width: 100%; /* Make map take full width */
+    }
+}
+
+
+
 /* Keyframe animations */
 @keyframes fadeInSlideUp {
     0% {
