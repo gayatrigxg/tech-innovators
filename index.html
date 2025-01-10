@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Innovators Club</title>
+    <style>
+
+.vision-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+    margin: 20px auto;
+    gap: 20px;
+    padding: 0 100px;
+}
+
+.vision-text {
+    flex: 1;
+}
+
+.vision-image {
+    flex: 1;
+    order: 1; /* Moves the image to the right */
+}
+
+.vision-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+.who-are-we-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Ensures proper spacing */
+    text-align:left; /* Align text to the left */
+    margin: 20px auto;
+    gap: 100px; /* Space between text and image */
+    padding: 0 100px;
+}
+
+.who-are-we-text {
+    flex: 1; /* Allows text to take up available space */
+}
+
+.who-are-we-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    flex: 1;
+}
+
+
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+            transition: background-color 0.5s ease, color 0.5s ease;
+            scroll-behavior: smooth;
+            font-size: 20px; /* Base font size for general text */
+            line-height: 1.7;
+        }
+        header {
+            background-color: #fbfbfb;
+            color: rgb(68, 14, 14);
+            padding: 25px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background-color 0.3s ease;
+        }
+        header nav {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            margin-left: -1000px;
+            letter-spacing: 3px;
+        }
+        header a {
+            color: rgb(93, 17, 17);
+            text-decoration: none;
+            margin: 0 40px;
+            transition: color 0.3s ease;
+            font-weight: bold;
+        }
+        header a:hover {
+            color: #311052;
+        }
+        .hero {
+            text-align: center;
+            padding: 110px;
+            background-color: rgb(29, 9, 56);
+            color: rgb(247, 233, 233);
+            transition: background 0.5s ease, color 0.5s ease;
+        }
+        .hero h2 {
+            font-size: 3.5rem;
+            animation: fadeInSlideUp 2s ease-in-out;
+        }
+        .hero p {
+            font-size: 2rem;
+            opacity: 0;
+            animation: fadeInText 3s ease-in-out 1s forwards;
+        }
+        .hero button {
+            height: 50px;
+            background-color: #e9e2e9;
+            color: rgb(48, 15, 61);
+            width: 100px;
+            border-radius: 30px;
+            border-style: solid;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        .hero button:hover {
+            background-color: #9180c8;
+            transform: scale(1.1);
+        }
+        .highlights, .vision, .get-involved {
+            padding: 20px;
+            text-align: center;
+            transition: color 0.3s ease;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        footer a {
+            color: #f3ca20;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        footer a:hover {
+            color: white;
+        }
+        .form-info h4 {
+    font-size: 2rem; /* Increase font size for "We don't bite!" */
+    font-weight: bold; /* Optional: Make it bolder if needed */
+    margin-bottom: 10px; /* Optional: Adjust spacing below the text */
+}
+
+h3 {
+    font-size: 1.5 rem; /* Increase font size for all h3 elements */
+    font-weight: bold; /* Optional: Make it bolder */
+    margin-bottom: 15px; /* Optional: Adjust spacing below headings */
+}
+
+
+        /* Contact Section */
+
+    
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-bottom: 2px solid #311052; /* Highlight bottom border on focus */
+    outline: none; /* Remove default focus outline */
+}
+
+
+        .contact-section {
+            text-align: center;
+            padding: 50px 20px;
+            background-color: #f9f9f9;
+            color: #121631;
+            margin-left: 80px;
+        }
+        .contact-container {
+            display: flex;
+            flex-direction: row; /* Align elements horizontally */
+            justify-content: center;
+            align-items: flex-start; /* Align content to the top */
+            gap: 100px; /* Add space between address and map */
+            margin-top: 50px; 
+        }
+        .contact-info {
+            text-align: left; /* Align address text to the left */
+            text-align: above;
+        }
+        iframe {
+            max-width: 500px;
+            height: 350px;
+            border: none;
+        }
+        .contact-form {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 500px; /* Limit form width */
+            text-align: left;
+            margin: auto; /* Center the form */
+        }
+        .contact-form h4 {
+            margin-bottom: 20px;
+        }
+        .contact-form label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%; /* Adjust width as needed */
+    padding: 10px 0; /* Top and bottom padding only */
+    margin: 15px auto; /* Center the inputs horizontally */
+    border: none; /* Remove all borders */
+    border-bottom: 2px solid #ccc; /* Add a bottom border */
+    border-radius: 0; /* Remove any border-radius */
+    font-size: 1rem;
+    display: block; /* Ensure the inputs are block elements */
+    background: none; /* Remove any background color */
+        }
+        .contact-form button {
+            width: 100%;
+            padding: 10px;
+            background-color: #311052;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        .contact-form button:hover {
+            background-color: #9180c8;
+        }
+
+
+        /* Container for Form and "We Don't Bite!" Section */
+        .form-container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    gap: 30px; /* Space between the form-info and contact-form */
+    margin: 100px auto;  /* Center the container on the page */
+    padding: 20px; /* Optional padding for spacing */
+}
+
+
+/* "We Don't Bite!" Section Styling */
+.form-info {
+    max-width: 400px; /* Limit the width */
+    margin-left: 100px; /* Align text to the left */
+    gap: 10px;
+    
+    text-align: left;
+}
+
+/* Ensure Contact Form Matches Alignment */
+.contact-form {
+    max-width: 500px; /* Limit form width */
+     /* Align text to the left */
+}
+.form-info{
+    margin-left: 100px;
+
+}
+.hero {
+    text-align: center;
+    padding: 110px;
+    background-color: rgb(29, 9, 56);
+    color: rgb(247, 233, 233);
+    transition: background 0.5s ease, color 0.5s ease;
+}
+
+.hero h2 {
+    font-size: 3.5rem;
+    animation: fadeInSlideUp 2s ease-in-out;
+}
+
+.hero p {
+    font-size: 2rem;
+    opacity: 0; /* Initially hidden */
+    animation: fadeInSlideUp 2s ease-in-out 0.5s forwards; /* Delay for p tag */
+}
+
+/* Style for "Who Are We?" section */
+.who-are-we h3 {
+    font-size: 3rem; /* Make the font size larger */
+    color: #311052; /* Change the text color */
+    font-weight: bold; /* Make the text bold */
+}
+
+/* Style for "Our Vision" section */
+.vision h3 {
+    font-size: 3rem; /* Make the font size larger */
+    color: #311052; /* Change the text color */
+    font-weight: bold; /* Make the text bold */
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* Keyframe animations */
+@keyframes fadeInSlideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px); /* Slide up effect */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* Reset to the original position */
+    }
+}
+
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="Tech Innovators Club Logo" style="height: 50px;">
+        <nav>
+            <a href="#">HOME</a>
+            <a href="#who-are-we">ABOUT</a>
+
+            <a href="#">EVENTS</a>
+            <a href="#">PROJECTS</a>
+            <a href="#contact">CONTACT US</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h2>UNLEASHING INNOVATION<br> AT MIT-WPU</h2>
+        <p>A COMMUNITY OF BUILDERS.</p>
+        <button onclick="window.location.href='#contact';">Join Us</button>
+
+    </section>
+
+    <section class="who-are-we" id="who-are-we">
+        <div class="who-are-we-container">
+            <div class="who-are-we-image">
+                <img src="who-are-we-image.jpg" alt="Who Are We Image">
+            </div>
+            <div class="who-are-we-text">
+                <h3>Who Are We?</h3>
+                <p>The Tech Innovators Club at MIT-WPU is a student-led organization focused on web and app<br> development, artificial intelligence, and cybersecurity. We meet regularly to collaborate on projects,<br> enhance technical skills, and stay updated with industry trends through workshops, lectures,<br> and competitions. Our goal is to empower students to create innovative solutions for tomorrow’s tech challenges.</p>
+            </div>
+        </div>
+    </section>
+    
+
+    <section class="vision">
+        <div class="vision-container">
+            <div class="vision-text">
+                <h3>Our Vision</h3>
+                <p>To be a leading platform for students to explore, innovate,<br> and excel in the ever-evolving tech landscape, fostering a<br> community that drives technological progress and empowers<br> individuals to make a meaningful impact.</p>
+            </div>
+            <div class="vision-image">
+                <img src="vision-image.jpg" alt="Vision Image">
+            </div>
+        </div>
+    </section>
+    
+
+    <section class="contact-section" id="contact">
+        <h3>Contact Us</h3>
+        <div class="contact-container">
+            <!-- Address and Map Section -->
+            <div class="contact-info">
+                <p>Tech Innovators Club</p>
+                <p>MIT-WPU, Kothrud</p>
+                <p>Pune, Maharashtra, India</p>
+            </div>
+            <div class="contact-map">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.2882050474224!2d73.81495007541365!3d18.516726387408202!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bf14c7bb7753%3A0xd4c263b40da3c0da!2sMIT-WPU!5e0!3m2!1sen!2sin!4v1678940912345!5m2!1sen!2sin"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    style="width: 500px; height: 300px;">
+                </iframe>
+            </div>
+        </div>
+
+        
+            <!-- Form Section with Flexbox -->
+            <div class="form-container">
+                <!-- "We Don't Bite!" Section -->
+                <div class="form-info">
+                    <h4>We don't bite!</h4>
+                    <p>If you're a student, interested sponsor/partner, or potential speaker,
+                     please let us know in the subject line! Prospective members should refer to our comp page.</p>
+                </div>
+        
+                <!-- Contact Form -->
+                <div class="contact-form">
+                    <form action="https://example.com/form-handler" method="POST">
+                        <div>
+                            <label for="firstName">First Name</label>
+                            <input type="text" id="firstName" name="firstName" required>
+                        </div>
+                        <div>
+                            <label for="lastName">Last Name</label>
+                            <input type="text" id="lastName" name="lastName" required>
+                        </div>
+                        <div>
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div>
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+                        <div>
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        
