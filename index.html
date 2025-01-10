@@ -399,6 +399,49 @@ html {
     }
 }
 
+@media (max-width: 768px) {
+    .who-are-we-container, .vision-container {
+        flex-direction: column; /* Stack content vertically */
+        padding: 10px; /* Reduce padding for smaller screens */
+    }
+
+    .who-are-we-text, .vision-text {
+        text-align: center; /* Center text for better readability */
+    }
+
+    .who-are-we-image img, .vision-image img {
+        max-width: 100%; /* Make images responsive */
+        height: auto; /* Maintain aspect ratio */
+        margin: 10px auto; /* Center images */
+    }
+}
+
+
+@media (max-width: 768px) {
+    h3 {
+        font-size: 1.8rem; /* Adjust heading sizes */
+    }
+
+    body {
+        font-size: 1rem; /* Adjust base text size */
+    }
+}
+
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block; /* Prevent inline spacing issues */
+}
+
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block; /* Prevent inline spacing issues */
+}
+
+
 
 
 /* Keyframe animations */
